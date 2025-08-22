@@ -21,6 +21,9 @@ class Car {
 public:
     virtual void startEngine() = 0;
     virtual void shiftGear(int gear) = 0;
+// Why = 0? -> it means the function is a pure virtual function.
+// It tells the compiler: “This function has no implementation in this class, it must be implemented in derived classes.”
+// A class containing at least one pure virtual function becomes an abstract class.
     virtual void accelerate() = 0;
     virtual void brake() = 0;
     virtual void stopEngine() = 0;
